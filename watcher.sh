@@ -4,10 +4,10 @@
 NAMESPACE="sre"
 
 # Name of the deployment
-DEPLOYMENT="stripe-app"
+DEPLOYMENT="swype-app"
 
 # Maximum number of restarts before scaling down
-MAX_RESTARTS=5
+MAX_RESTARTS=4
 
 while true; do
   # Get the number of restarts of the pod

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stripe-app
+  name: swype-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: stripe-app
+      app: swype-app
   template:
     metadata:
       labels:
-        app: stripe-app
+        app: swype-app
     spec:
       containers:
         - name: stripe
-          image: uonyeka/stripe:linux-amd64
+          image: uonyeka/stripe:linux-amd64 # Use uonyeka/stripe:linux-arm64 if you are building locally on a Mac
           ports:
             - containerPort: 5003
           imagePullPolicy: Always
